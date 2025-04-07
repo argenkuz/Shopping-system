@@ -42,3 +42,6 @@ class User:
 
     def set_phone_number(self, phone_number):
         self.__phone_number = phone_number
+
+    def __str__(self):
+        return f"Name: {self.__name}, Username: {self.__username}, Password: {self.__password}, Address: {self.__address}, Email: {self.__email}, Phone Number: {self.__phone_number}"
