@@ -21,7 +21,7 @@ class Ui_LoginWindow(object):
         self.centralwidget = QtWidgets.QWidget(parent=LoginWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tabWidget = QtWidgets.QTabWidget(parent=self.centralwidget)
-        self.tabWidget.setGeometry(QtCore.QRect(-10, -20, 551, 601))
+        self.tabWidget.setGeometry(QtCore.QRect(-10, -10, 551, 601))
         self.tabWidget.setObjectName("tabWidget")
         self.tab_1 = QtWidgets.QWidget()
         self.tab_1.setObjectName("tab_1")
@@ -248,6 +248,19 @@ class Ui_LoginWindow(object):
 "")
         self.label_10.setText("")
         self.label_10.setObjectName("label_10")
+        self.label_11 = QtWidgets.QLabel(parent=self.tab_4)
+        self.label_11.setGeometry(QtCore.QRect(20, 300, 481, 41))
+        self.label_11.setStyleSheet("QLabel {\n"
+"    color: rgb(34, 139, 34); /* Зелёный цвет текста */\n"
+"    font-size: 14px;\n"
+"    border-radius: 10px;\n"
+"    padding-left: 15px;\n"
+"    border: 2px solid rgb(137,172,70); /* Границы */\n"
+"    background-color: rgb(211,230,113);\n"
+"}\n"
+"")
+        self.label_11.setText("")
+        self.label_11.setObjectName("label_11")
         self.tabWidget.addTab(self.tab_4, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
@@ -403,7 +416,7 @@ class Ui_LoginWindow(object):
         self.frame_2.setLineWidth(1)
         self.frame_2.setObjectName("frame_2")
         self.label_12 = QtWidgets.QLabel(parent=self.tab_2)
-        self.label_12.setEnabled(False)
+        self.label_12.setEnabled(True)
         self.label_12.setGeometry(QtCore.QRect(340, 130, 191, 41))
         self.label_12.setStyleSheet("QLabel {\n"
 "    color: rgb(154, 70, 74);\n"
@@ -417,7 +430,7 @@ class Ui_LoginWindow(object):
         self.label_12.setText("")
         self.label_12.setObjectName("label_12")
         self.label_13 = QtWidgets.QLabel(parent=self.tab_2)
-        self.label_13.setEnabled(False)
+        self.label_13.setEnabled(True)
         self.label_13.setGeometry(QtCore.QRect(340, 190, 191, 41))
         self.label_13.setStyleSheet("QLabel {\n"
 "    color: rgb(154, 70, 74);\n"
@@ -569,6 +582,203 @@ class Ui_LoginWindow(object):
         self.frame_8.raise_()
         self.pushButton_16.raise_()
         self.tabWidget.addTab(self.tab_6, "")
+        self.tab = QtWidgets.QWidget()
+        self.tab.setObjectName("tab")
+        self.label_18 = QtWidgets.QLabel(parent=self.tab)
+        self.label_18.setGeometry(QtCore.QRect(20, 20, 371, 51))
+        self.label_18.setStyleSheet("\n"
+"color: rgb(0, 0, 0);\n"
+"font-weight: bold;\n"
+"font-size: 23px")
+        self.label_18.setOpenExternalLinks(False)
+        self.label_18.setObjectName("label_18")
+        self.frame_9 = QtWidgets.QFrame(parent=self.tab)
+        self.frame_9.setGeometry(QtCore.QRect(0, 70, 561, 20))
+        self.frame_9.setFrameShape(QtWidgets.QFrame.Shape.HLine)
+        self.frame_9.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
+        self.frame_9.setLineWidth(1)
+        self.frame_9.setObjectName("frame_9")
+        self.frame_10 = QtWidgets.QFrame(parent=self.tab)
+        self.frame_10.setGeometry(QtCore.QRect(10, 430, 561, 20))
+        self.frame_10.setFrameShape(QtWidgets.QFrame.Shape.HLine)
+        self.frame_10.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
+        self.frame_10.setLineWidth(1)
+        self.frame_10.setObjectName("frame_10")
+        self.lineEdit_17 = QtWidgets.QLineEdit(parent=self.tab)
+        self.lineEdit_17.setGeometry(QtCore.QRect(20, 110, 261, 41))
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.lineEdit_17.setFont(font)
+        self.lineEdit_17.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.IBeamCursor))
+        self.lineEdit_17.setStyleSheet("QLineEdit {\n"
+"    color: rgb(0, 0, 0);\n"
+"    font-size: 14px;\n"
+"    border-radius: 10px;\n"
+"    padding-left: 15px;\n"
+"    border: 2px solid rgb(191, 191, 191); /* Границы серого цвета */\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"")
+        self.lineEdit_17.setText("")
+        self.lineEdit_17.setObjectName("lineEdit_17")
+        self.label_19 = QtWidgets.QLabel(parent=self.tab)
+        self.label_19.setGeometry(QtCore.QRect(30, 350, 481, 41))
+        self.label_19.setStyleSheet("QLabel {\n"
+"    color: rgb(34, 139, 34); /* Зелёный цвет текста */\n"
+"    font-size: 14px;\n"
+"    border-radius: 10px;\n"
+"    padding-left: 15px;\n"
+"    border: 2px solid rgb(137,172,70); /* Границы */\n"
+"    background-color: rgb(211,230,113);\n"
+"}\n"
+"")
+        self.label_19.setText("")
+        self.label_19.setObjectName("label_19")
+        self.pushButton_17 = QtWidgets.QPushButton(parent=self.tab)
+        self.pushButton_17.setGeometry(QtCore.QRect(270, 470, 121, 41))
+        self.pushButton_17.setStyleSheet("\n"
+"QPushButton {\n"
+"    color: white;\n"
+"    background-color: rgb(56, 82 , 151);\n"
+"    border-radius:7px\n"
+"\n"
+"\n"
+"    \n"
+"    \n"
+"}\n"
+"")
+        self.pushButton_17.setObjectName("pushButton_17")
+        self.pushButton_18 = QtWidgets.QPushButton(parent=self.tab)
+        self.pushButton_18.setGeometry(QtCore.QRect(150, 470, 111, 41))
+        self.pushButton_18.setStyleSheet("\n"
+"QPushButton {\n"
+"    color: black;\n"
+"    border: 1px solid rgb(191, 191, 191);\n"
+"    background-color: white;\n"
+"    border-radius:7px\n"
+"    \n"
+"\n"
+"    \n"
+"    \n"
+"}\n"
+"")
+        self.pushButton_18.setObjectName("pushButton_18")
+        self.label_20 = QtWidgets.QLabel(parent=self.tab)
+        self.label_20.setGeometry(QtCore.QRect(30, 350, 481, 41))
+        self.label_20.setStyleSheet("QLabel {\n"
+"    color: rgb(154, 70, 74);\n"
+"    font-size: 14px;\n"
+"    border-radius: 10px;\n"
+"    padding-left: 15px;\n"
+"    border: 2px solid rgb(234, 214, 214); /* Границы серого цвета */\n"
+"    background-color: rgb(239, 223, 222);\n"
+"}\n"
+"")
+        self.label_20.setText("")
+        self.label_20.setObjectName("label_20")
+        self.lineEdit_18 = QtWidgets.QLineEdit(parent=self.tab)
+        self.lineEdit_18.setGeometry(QtCore.QRect(20, 170, 261, 41))
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.lineEdit_18.setFont(font)
+        self.lineEdit_18.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.IBeamCursor))
+        self.lineEdit_18.setStyleSheet("QLineEdit {\n"
+"    color: rgb(0, 0, 0);\n"
+"    font-size: 14px;\n"
+"    border-radius: 10px;\n"
+"    padding-left: 15px;\n"
+"    border: 2px solid rgb(191, 191, 191); /* Границы серого цвета */\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"")
+        self.lineEdit_18.setText("")
+        self.lineEdit_18.setObjectName("lineEdit_18")
+        self.pushButton_32 = QtWidgets.QPushButton(parent=self.tab)
+        self.pushButton_32.setGeometry(QtCore.QRect(400, 470, 121, 41))
+        self.pushButton_32.setStyleSheet("\n"
+"QPushButton {\n"
+"    color: white;\n"
+"    background-color: rgb(56, 82 , 151);\n"
+"    border-radius:7px\n"
+"\n"
+"\n"
+"    \n"
+"    \n"
+"}\n"
+"")
+        self.pushButton_32.setObjectName("pushButton_32")
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_3 = QtWidgets.QWidget()
+        self.tab_3.setObjectName("tab_3")
+        self.lineEdit_29 = QtWidgets.QLineEdit(parent=self.tab_3)
+        self.lineEdit_29.setGeometry(QtCore.QRect(20, 170, 261, 41))
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.lineEdit_29.setFont(font)
+        self.lineEdit_29.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.IBeamCursor))
+        self.lineEdit_29.setStyleSheet("QLineEdit {\n"
+"    color: rgb(0, 0, 0);\n"
+"    font-size: 14px;\n"
+"    border-radius: 10px;\n"
+"    padding-left: 15px;\n"
+"    border: 2px solid rgb(191, 191, 191); /* Границы серого цвета */\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"")
+        self.lineEdit_29.setText("")
+        self.lineEdit_29.setObjectName("lineEdit_29")
+        self.lineEdit_30 = QtWidgets.QLineEdit(parent=self.tab_3)
+        self.lineEdit_30.setGeometry(QtCore.QRect(20, 110, 261, 41))
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.lineEdit_30.setFont(font)
+        self.lineEdit_30.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.IBeamCursor))
+        self.lineEdit_30.setStyleSheet("QLineEdit {\n"
+"    color: rgb(0, 0, 0);\n"
+"    font-size: 14px;\n"
+"    border-radius: 10px;\n"
+"    padding-left: 15px;\n"
+"    border: 2px solid rgb(191, 191, 191); /* Границы серого цвета */\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"")
+        self.lineEdit_30.setText("")
+        self.lineEdit_30.setObjectName("lineEdit_30")
+        self.label_41 = QtWidgets.QLabel(parent=self.tab_3)
+        self.label_41.setGeometry(QtCore.QRect(20, 10, 181, 51))
+        self.label_41.setStyleSheet("\n"
+"color: rgb(0, 0, 0);\n"
+"font-weight: bold;\n"
+"font-size: 23px")
+        self.label_41.setOpenExternalLinks(False)
+        self.label_41.setObjectName("label_41")
+        self.frame_21 = QtWidgets.QFrame(parent=self.tab_3)
+        self.frame_21.setGeometry(QtCore.QRect(10, 60, 561, 20))
+        self.frame_21.setFrameShape(QtWidgets.QFrame.Shape.HLine)
+        self.frame_21.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
+        self.frame_21.setLineWidth(1)
+        self.frame_21.setObjectName("frame_21")
+        self.frame_22 = QtWidgets.QFrame(parent=self.tab_3)
+        self.frame_22.setGeometry(QtCore.QRect(0, 420, 561, 20))
+        self.frame_22.setFrameShape(QtWidgets.QFrame.Shape.HLine)
+        self.frame_22.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
+        self.frame_22.setLineWidth(1)
+        self.frame_22.setObjectName("frame_22")
+        self.pushButton_31 = QtWidgets.QPushButton(parent=self.tab_3)
+        self.pushButton_31.setGeometry(QtCore.QRect(400, 460, 121, 41))
+        self.pushButton_31.setStyleSheet("\n"
+"QPushButton {\n"
+"    color: white;\n"
+"    background-color: rgb(56, 82 , 151);\n"
+"    border-radius:7px\n"
+"\n"
+"\n"
+"    \n"
+"    \n"
+"}\n"
+"")
+        self.pushButton_31.setObjectName("pushButton_31")
+        self.tabWidget.addTab(self.tab_3, "")
         LoginWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=LoginWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 532, 21))
@@ -579,7 +789,7 @@ class Ui_LoginWindow(object):
         LoginWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(LoginWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(5)
         QtCore.QMetaObject.connectSlotsByName(LoginWindow)
 
     def retranslateUi(self, LoginWindow):
@@ -619,3 +829,15 @@ class Ui_LoginWindow(object):
         self.label_9.setText(_translate("LoginWindow", "<html><head/><body><p>tg: @shoppy</p><p>phone: +996223244437</p></body></html>"))
         self.pushButton_16.setText(_translate("LoginWindow", "Cancel"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_6), _translate("LoginWindow", "Страница"))
+        self.label_18.setText(_translate("LoginWindow", "Write your email for reset the code"))
+        self.lineEdit_17.setPlaceholderText(_translate("LoginWindow", "email"))
+        self.pushButton_17.setText(_translate("LoginWindow", "Send code"))
+        self.pushButton_18.setText(_translate("LoginWindow", "Cancel"))
+        self.lineEdit_18.setPlaceholderText(_translate("LoginWindow", "code"))
+        self.pushButton_32.setText(_translate("LoginWindow", "Check code"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("LoginWindow", "Страница"))
+        self.lineEdit_29.setPlaceholderText(_translate("LoginWindow", "confirm password"))
+        self.lineEdit_30.setPlaceholderText(_translate("LoginWindow", "password"))
+        self.label_41.setText(_translate("LoginWindow", "Reset password"))
+        self.pushButton_31.setText(_translate("LoginWindow", "Change"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("LoginWindow", "Страница"))
