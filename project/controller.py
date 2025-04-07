@@ -203,7 +203,7 @@ class Controller(QMainWindow, Ui_MainWindow):
         if password == confirm_password:
             self.dao.update_password(self.email, password)
             self.ui_login.tabWidget.setCurrentIndex(0)
-
+#
 
 
 
