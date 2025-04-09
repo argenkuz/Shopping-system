@@ -3,8 +3,8 @@ from PyQt6.QtCore import QTimer
 from project.qt import Ui_MainWindow
 from project.login import Ui_LoginWindow
 from model import Model
-from user_dao import UserDAO
-import time
+from dao.user_dao import UserDAO
+
 
 class Controller(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -78,6 +78,7 @@ class Controller(QMainWindow, Ui_MainWindow):
         self.ui_login.label_11.setVisible(False)
         self.ui_login.label_19.setVisible(False)
         self.ui_login.label_20.setVisible(False)
+        self.ui_login.label_21.setVisible(False)
 
     def switch_to_tab_login(self):
         self.ui_login.tabWidget.setCurrentIndex(1)
@@ -156,6 +157,7 @@ class Controller(QMainWindow, Ui_MainWindow):
         self.login_window.close()
 
     def create_account(self):
+        self.set_visible()
         name = self.ui_login.lineEdit_11.text()
         username = self.ui_login.lineEdit_13.text()
         password = self.ui_login.lineEdit_9.text()
@@ -197,12 +199,21 @@ class Controller(QMainWindow, Ui_MainWindow):
             self.ui_login.lineEdit_17.setEnabled(True)
 
     def change_password(self):
+        self.set_visible()
         password = self.ui_login.lineEdit_30.text()
         confirm_password = self.ui_login.lineEdit_29.text()
-
         if password == confirm_password:
-            self.dao.update_password(self.email, password)
-            self.ui_login.tabWidget.setCurrentIndex(0)
+            if self.model.is_strong_password(password):
+                self.dao.update_password(self.email, password)
+                self.switch_to_tab_login()
+            else:
+                self.ui_login.label_21.setText("Passwords is weak")
+                self.ui_login.label_21.setVisible(True)
+        else:
+            self.ui_login.label_21.setText("Passwords do not match")
+            self.ui_login.label_21.setVisible(True)
+
+
 #
 
 
