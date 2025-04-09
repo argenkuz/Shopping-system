@@ -21,7 +21,7 @@ class Ui_LoginWindow(object):
         self.centralwidget = QtWidgets.QWidget(parent=LoginWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tabWidget = QtWidgets.QTabWidget(parent=self.centralwidget)
-        self.tabWidget.setGeometry(QtCore.QRect(-10, -10, 551, 601))
+        self.tabWidget.setGeometry(QtCore.QRect(-10, -30, 551, 621))
         self.tabWidget.setObjectName("tabWidget")
         self.tab_1 = QtWidgets.QWidget()
         self.tab_1.setObjectName("tab_1")
@@ -778,6 +778,19 @@ class Ui_LoginWindow(object):
 "}\n"
 "")
         self.pushButton_31.setObjectName("pushButton_31")
+        self.label_21 = QtWidgets.QLabel(parent=self.tab_3)
+        self.label_21.setGeometry(QtCore.QRect(30, 350, 481, 41))
+        self.label_21.setStyleSheet("QLabel {\n"
+"    color: rgb(154, 70, 74);\n"
+"    font-size: 14px;\n"
+"    border-radius: 10px;\n"
+"    padding-left: 15px;\n"
+"    border: 2px solid rgb(234, 214, 214); /* Границы серого цвета */\n"
+"    background-color: rgb(239, 223, 222);\n"
+"}\n"
+"")
+        self.label_21.setText("")
+        self.label_21.setObjectName("label_21")
         self.tabWidget.addTab(self.tab_3, "")
         LoginWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=LoginWindow)
@@ -789,7 +802,7 @@ class Ui_LoginWindow(object):
         LoginWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(LoginWindow)
-        self.tabWidget.setCurrentIndex(5)
+        self.tabWidget.setCurrentIndex(6)
         QtCore.QMetaObject.connectSlotsByName(LoginWindow)
 
     def retranslateUi(self, LoginWindow):
