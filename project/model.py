@@ -1,5 +1,5 @@
 import re
-from user import User
+from classes.user import User
 import random
 import smtplib
 from email.mime.text import MIMEText
