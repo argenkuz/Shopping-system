@@ -1,31 +1,33 @@
-# Simple GUI Shopping System
+# 🛍️ Simple GUI Shopping System
 
 This repository contains the simple shopping system built on Python. This project has Graphical User Interface(GUI) and implementation of databases.
 
-## Our Team
-- [Argen Kulzhanov](https://github.com/argenkuz) (argenkuz): Design and GUI.
-- [Kirill Donetskov](https://github.com/kd0nwww) (kd0nwww): Code and logic.
-- [Magomed Mukhamedov](): Databases and documentation.
+## 👥 Our Team
+- [Argen Kulzhanov](https://github.com/argenkuz) (argenkuz): 🎨 Design and GUI.
+- [Kirill Donetskov](https://github.com/kd0nwww) (kd0nwww): 🧠 Code and logic.
+- [Magomed Mukhamedov](https://github.com/Quadraft) (Quadraft): 🗄️ Databases and documentation.
 
-## Structure
-- [user.py](/project/classes/user.py) : Contains the class that creates `User` instances.
-- [product.py](/project/classes/product.py) : Contains the class that creates `Product` instances.
-- [shoppingcart.py](/project/classes/shoppingcart.py) : Class that creates `ShoppingCart` instances.
-- [base_dao.py](/project/dao/base_dao.py) : Contains the base DAO class (`Dao`) that is responsible to make CRUD operations with the database.
-- [user_dao.py](/project/dao/user_dao.py) : Contains DAO class that inherits from `Dao` that is in base_dao.py
-- [products_dao.py](/project/dao/products_dao.py) : Contains DAO class that inherits from `Dao` that is in base_dao.py
-- [shoppingcart_dao.py](/project/dao/shoppingcart_dao.py) : Contains DAO class that inherits from `Dao` that is in base_dao.py
-- [parser](/project/parser) : Simple Amazon web scraper.
-- [controller.py](/project/controller.py) : This file makes the connection between logic and design.
-- [login.py](/project/login.py) : File with the design of login page.
-- [main.py](/project/main.py) : File that launches the whole program.
-- [model.py](/project/model.py) : File that contains the logic of program.
-- [qt.py](/project/qt.py) : File that contains the design of starting page.
+## 📂 Structure
 
-## User class
+- [user.py](/project/classes/user.py) : 🧑‍💻 Contains the class that creates `User` instances.
+- [product.py](/project/classes/product.py) : 🛒 Contains the class that creates `Product` instances.
+- [shoppingcart.py](/project/classes/shoppingcart.py) : 🛍️ Class that creates `ShoppingCart` instances.
+- [base_dao.py](/project/dao/base_dao.py) : 🗄️ Contains the base DAO class (`Dao`) that is responsible to make CRUD operations with the database.
+- [user_dao.py](/project/dao/user_dao.py) : 👤 Contains DAO class that inherits from `Dao` that is in base_dao.py.
+- [products_dao.py](/project/dao/products_dao.py) : 📦 Contains DAO class that inherits from `Dao` that is in base_dao.py.
+- [shoppingcart_dao.py](/project/dao/shoppingcart_dao.py) : 🛒 Contains DAO class that inherits from `Dao` that is in base_dao.py.
+- [parser](/project/parser) : 🔍 Simple Amazon web scraper.
+- [controller.py](/project/controller.py) : 🔗 This file makes the connection between logic and design.
+- [login.py](/project/login.py) : 🔑 File with the design of login page.
+- [main.py](/project/main.py) : 🚀 File that launches the whole program.
+- [model.py](/project/model.py) : 🧠 File that contains the logic of program.
+- [qt.py](/project/qt.py) : 🎨 File that contains the design of starting page.
+
+
+## 🧑‍💻 User class
 The User class represents a shopping system user. Attributes are listed below. The class also includes getters and setters for each attribute. Magic method `__str()__` is used here for formatted string representation.
 
-### Attributes
+### Attributes 
 - `name`: User's name.
 - `username`: User's username.
 - `password`: User's password.
@@ -33,7 +35,7 @@ The User class represents a shopping system user. Attributes are listed below. T
 - `email`: User's email.
 - `phone_number`: User's phone number.
 
-## Product class
+## 🛒 Product class
 The Products class represents a product in the shopping system. It has getters and setters for each attribute.
 
 ### Attributes
@@ -46,8 +48,7 @@ The Products class represents a product in the shopping system. It has getters a
 ### Methods
 - `is_available(amount: int)`: Returns `True` if `amount` of products are available.
 - `update_stock(quantity: int)`: Changes the number of available items.
-
-## Dao class
+## 🗄️ Dao class
 This class represents a blueprint for managing user-related database operation classes.
 
 ### Attributes
@@ -58,7 +59,7 @@ This class represents a blueprint for managing user-related database operation c
 - `fetch_all(query: str, params=None)`: Return all records contained in cursor.
 - `fetch_one(query: str, params=None)`: Return one record contained in cursor.
 
-## UserDAO class
+## 👤 UserDAO class
 This class provides functionality to interact with the Users table in the database. 
 The class includes methods to insert new users, retrieve user details by username or email, fetch all users, and update user passwords. Inherits from `base_dao.py`.
 
@@ -72,7 +73,7 @@ The class includes methods to insert new users, retrieve user details by usernam
 - `get_all_users()`: Return all `User` objects contained in database.
 - `update_password(email: str, new_password: str)`: Updates the `User` objects password with the given `email`.
 
-## ProductsDAO class
+## 📦 ProductsDAO class
 This class provides functionality to interact with the Products table in the database. 
 The class includes methods to insert new products, retrieve product details by product name, fetch all products, update product stock and delete products from table. Inherits from `base_dao.py`.
 
@@ -86,7 +87,7 @@ The class includes methods to insert new products, retrieve product details by p
 - `update_stock(product_name: str, quantity: int)`: Updates stock of the product.
 - `delete(product_name: str)`: Deletes product by product name.
 
-## ShoppingCartDAO class
+## 🛒 ShoppingCartDAO class
 This class provides functionality to interact with the Shoppingcart table in the database. The class includes methods to add, update, delete and retrieve items from the cart. Inherits from `base_dao.py`.
 
 ### Attributes
@@ -101,7 +102,7 @@ This class provides functionality to interact with the Shoppingcart table in the
 - `get_headers()`: Returns all column names in the table.
 - `get_all_items_without_id()`: Returns all columns expect the id column.
 
-## Model class
+## 🧠 Model class
 This class contains the logic of whole program. Contains methods related to account creation, passwords creation and validation of emails. The one from the most important functions is `send_reset_password` which sends and then validates 4-digit code for password reset.
 
 ### Methods
@@ -112,7 +113,7 @@ This class contains the logic of whole program. Contains methods related to acco
 - `len_of_username(self,username)`: Returns the length of username.
 - `send_reset_password(self,email)`: Sends reset 4-digit code to email address of the user. Allows to change password if the code is valid.
 
-## Controller class
+## 🔗 Controller class
 ### Methods
 - `show_main_window()`: Displays the main application window and initializes its buttons.
 - `show_login_window()`: Displays the login window and initializes its buttons.
@@ -138,7 +139,14 @@ This class contains the logic of whole program. Contains methods related to acco
 - `highlight_labels()`: Clears the search query and resets label highlights.
 - `load_cart_table()`: Loads the shopping cart data into the cart table widget.
 
-## Database reports
+### 🖼️ UML Diagrams
+![screenshot](project/imgs/uml1.jpg)
+---
+![screenshot](project/imgs/uml2.jpg)
+---
+![screenshot](project/imgs/uml3.jpg)
+
+## 📊 Database Reports
 ### Checking if the product does not have a category.
 ![screenshot](project/imgs/1.jpg)
 ---
@@ -154,7 +162,7 @@ This class contains the logic of whole program. Contains methods related to acco
 ### Counting number of users.
 ![screenshot](project/imgs/5.jpg)
 
-## Installation and Usage
+## ⚙️ Installation and Usage
 1. Clone the repository:
     ```bash
     git clone https://github.com/argenkuz/Shopping-system.git
